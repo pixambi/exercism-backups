@@ -250,7 +250,7 @@ func BenchmarkDiscard(b *testing.B) {
 		b.Skip("skipping benchmark in short mode.")
 	}
 	for i := 0; i < b.N; i++ {
-		for _, test := range keepIntTests {
+		for _, test := range discardIntTests {
 			Discard(test.list, test.filterFunc)
 		}
 	}
